@@ -1,0 +1,5 @@
+fuel,unit,emission_factor,emission_unit,emission_type,source
+Coal,kg,2.42,kg CO2/kg,direct combustion,To be verified
+Natural gas,m3,1.98,kg CO2/m3,direct combustion,To be verified
+Petrol,L,2.31,kg CO2/L,direct combustion,To be verified
+Diesel,L,2.68,kg CO2/L,direct combustion,To be verified
