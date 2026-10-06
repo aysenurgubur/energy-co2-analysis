@@ -1,89 +1,134 @@
-body {
-
-    font-family: Arial, sans-serif;
-
-    background-color: #f4f7f5;
-
-    margin: 0;
-
-    padding: 50px 20px;
-
-    color: #1f2933;
-
+* {
+    box-sizing: border-box;
 }
 
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f3f7f5;
+    color: #17251f;
+}
+
+/* Main page */
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 60px 20px;
+}
+
+/* Header */
 
 h1 {
-
+    margin: 0;
     text-align: center;
-
-    font-size: 40px;
-
+    font-size: 48px;
+    font-weight: 700;
+    letter-spacing: -1px;
+    color: #12372a;
 }
 
-
-p {
-
+body > p {
+    max-width: 600px;
+    margin: 16px auto 40px;
     text-align: center;
-
-    font-size: 18px;
-
+    line-height: 1.6;
+    color: #5d6b65;
+    font-size: 17px;
 }
 
+/* Calculator card */
 
 label {
-
     display: block;
-
-    font-weight: bold;
-
     margin-bottom: 8px;
-
+    font-size: 14px;
+    font-weight: 700;
+    color: #31433b;
 }
-
 
 select,
 input {
-
     width: 100%;
+    padding: 15px 16px;
+    margin-bottom: 24px;
 
-    box-sizing: border-box;
+    border: 1px solid #d5e0db;
+    border-radius: 10px;
 
-    padding: 14px;
-
-    margin-bottom: 20px;
+    background: #ffffff;
+    color: #17251f;
 
     font-size: 16px;
+    outline: none;
 
-    border: 1px solid #cbd5e1;
-
-    border-radius: 8px;
-
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
 }
 
+select:focus,
+input:focus {
+    border-color: #3b8065;
 
-select {
-
-    background-color: white;
-
+    box-shadow:
+        0 0 0 3px rgba(59, 128, 101, 0.12);
 }
 
+/* Unit */
 
-input {
+#unit {
+    display: block;
+    margin-top: -16px;
+    margin-bottom: 24px;
 
-    background-color: white;
-
+    color: #718079;
+    font-size: 14px;
 }
 
+/* Result section */
+
+h2 {
+    margin-top: 30px;
+    margin-bottom: 12px;
+
+    text-align: center;
+    font-size: 18px;
+    font-weight: 600;
+    color: #52635b;
+}
 
 #result {
-
-    font-size: 32px;
-
-    font-weight: bold;
+    margin: 0;
 
     text-align: center;
 
-    margin-top: 20px;
+    font-size: 38px;
+    font-weight: 700;
 
+    color: #23724f;
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+
+    body {
+        padding: 40px 16px;
+    }
+
+    h1 {
+        font-size: 36px;
+    }
+
+    body > p {
+        font-size: 16px;
+        margin-bottom: 30px;
+    }
+
+    #result {
+        font-size: 30px;
+    }
 }
