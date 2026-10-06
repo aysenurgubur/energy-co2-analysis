@@ -4,8 +4,15 @@ const result = document.getElementById("result");
 const unit = document.getElementById("unit");
 
 const emissionFactors = {
-    coal: 2.42,
-    naturalGas: 2.75
+    coal: {
+        factor: 2.42,
+        unit: "kg"
+    },
+
+    naturalGas: {
+        factor: 2.75,
+        unit: "m³"
+    }
 };
 
 function calculateEmissions() {
@@ -13,14 +20,21 @@ function calculateEmissions() {
     const selectedSource = energySource.value;
     const amountUsed = Number(amount.value);
 
-    if (amountUsed <= 0 || isNaN(amountUsed)) {
+    const sourceData = emissionFactors[selectedSource];
+
+    unit.textContent = sourceData.unit;
+
+    if (amount.value === "" || amountUsed < 0) {
         result.textContent = "Enter a valid amount.";
         return;
     }
 
-    const emissionFactor = emissionFactors[selectedSource];
+    if (amountUsed === 0) {
+        result.textContent = "0.00 kg CO₂";
+        return;
+    }
 
-    const emissions = amountUsed * emissionFactor;
+    const emissions = amountUsed * sourceData.factor;
 
     result.textContent =
         emissions.toFixed(2) + " kg CO₂";
