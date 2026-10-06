@@ -12,34 +12,54 @@
 
 <body>
 
-    <h1>Energy CO₂ Calculator</h1>
+    <div class="container">
 
-    <p>Estimate your CO₂ emissions from energy consumption.</p>
+        <h1>Energy CO₂ Calculator</h1>
 
-    <label for="energySource">Energy source:</label>
+        <p class="subtitle">
+            Estimate the CO₂ emissions associated with your energy consumption.
+        </p>
 
-    <select id="energySource">
-        <option value="coal">Coal</option>
-        <option value="naturalGas">Natural Gas</option>
-    </select>
+        <div class="calculator">
 
-    <br><br>
+            <label for="energySource">
+                Energy source
+            </label>
 
-    <label for="amount">Amount:</label>
+            <select id="energySource">
+                <option value="coal">Coal</option>
+                <option value="naturalGas">Natural Gas</option>
+            </select>
 
-    <input
-        type="number"
-        id="amount"
-        placeholder="Enter amount"
-        min="0"
-        step="any"
-    >
+            <label for="amount">
+                Amount consumed
+            </label>
 
-    <span id="unit">kg</span>
+            <input
+                type="number"
+                id="amount"
+                placeholder="Enter amount"
+                min="0"
+                step="any"
+            >
 
-    <h2>Estimated CO₂ emissions</h2>
+            <p>
+                Unit: <strong id="unit">kg</strong>
+            </p>
 
-    <p id="result">Enter a value above.</p>
+            <div class="result">
+
+                <h2>Estimated CO₂ emissions</h2>
+
+                <p id="result">
+                    Enter a value above.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
 
     <script src="script.js"></script>
 
