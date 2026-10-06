@@ -1,17 +1,31 @@
-# Energy CO2 Analysis
+# Weekly Energy Production & CO₂ Emissions Analysis
+This project analyzes weekly electricity production from nuclear and coal power plants and compares their associated CO₂ emissions.
 
-This project analyzes weekly energy production data and compares CO2 emissions between nuclear and coal power plants.
+The goal is to investigate how electricity production from these two energy sources differs in terms of:
+- Energy production
+- Total CO₂ emissions
+- CO₂ emissions per MWh
+- Weekly trends
+- Differences between nuclear and coal generation
 
-## Features
-- Reads energy data from CSV
-- Calculates total energy production
-- Estimates CO2 emissions
-- Visualizes results with a bar chart
+## Comparison
+How do nuclear and coal power generation compare in terms of electricity production and CO₂ emissions on a weekly basis?
 
 ## Technologies
 - Python
-- pandas
-- matplotlib
+- Pandas
+- Matplotlib
+- Data visualization
+- HTML
+- CSS
+- JavaScript
 
-## Result
-The project demonstrates the significant difference in emissions between low-carbon and fossil fuel energy sources.
+## Project Structure
+```text
+energy-co2-analysis/
+│
+├── data/
+├── analysis/
+├── results/
+├── website/
+└── README.md
